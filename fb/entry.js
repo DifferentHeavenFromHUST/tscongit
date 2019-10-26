@@ -71,8 +71,8 @@ var Bird = /** @class */ (function () {
 }());
 var Tube = /** @class */ (function () {
     function Tube(stage, x) {
-        this.innerDistance = 80;
-        this.tubeWidth = 20;
+        this.innerDistance = 160;
+        this.tubeWidth = 10;
         this.sprite = new PIXI.Graphics();
         stage.addChild(this.sprite);
         this.reset(x);

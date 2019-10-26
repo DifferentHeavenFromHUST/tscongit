@@ -76,8 +76,8 @@ class Bird {
 class Tube {
   private x: number;
   private y: number;
-  private innerDistance = 80;
-  private tubeWidth = 20;
+  private innerDistance = 160;
+  private tubeWidth = 10;
 
   private sprite = new PIXI.Graphics();
 
@@ -153,7 +153,7 @@ function draw() {
 
 button.addEventListener('click', () => {
   gameStarted = true;
-  button.innerHTML = 'Retry';
+  button.innerHTML = 'Thử lại';
   if (gameFailed) {
     gameFailed = false;
     tubeList.forEach((d, i) => d.reset(TUBE_POS_LIST[i]));
