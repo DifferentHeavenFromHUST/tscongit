@@ -6,7 +6,7 @@ const BIRD_FRAME_LIST = [
   './images/frame-2.png',
   './images/frame-3.png',
   './images/frame-4.png',
-];
+]; // From https://opengameart.org/content/free-game-asset-grumpy-flappy-bird-sprite-sheets
 const TUBE_POS_LIST: number[] = [
   canvasWidthHeight + 50,
   canvasWidthHeight + 250,
@@ -16,7 +16,7 @@ const TUBE_POS_LIST: number[] = [
 class Bird {
   private speedY: number = 0;
   private sprite = new PIXI.Sprite();
-  private isDied: boolean;
+  private isDied: boolean; // 0 or 1 can not be used.
 
   private textureCounter: number = 0;
   private updateTexture = () => {
@@ -27,7 +27,7 @@ class Bird {
   }
 
   updateSprite = () => {
-    this.speedY += GRAVITY / 70;
+    this.speedY += GRAVITY / 100;
     this.sprite.y += this.speedY;
     this.sprite.rotation = Math.atan(this.speedY / GAME_SPEED_X);
 

@@ -6,7 +6,7 @@ var BIRD_FRAME_LIST = [
     './images/frame-2.png',
     './images/frame-3.png',
     './images/frame-4.png',
-];
+]; // From https://opengameart.org/content/free-game-asset-grumpy-flappy-bird-sprite-sheets
 var TUBE_POS_LIST = [
     canvasWidthHeight + 50,
     canvasWidthHeight + 250,
@@ -28,7 +28,7 @@ var Bird = /** @class */ (function () {
                 _this.textureCounter = 0;
         };
         this.updateSprite = function () {
-            _this.speedY += GRAVITY / 70;
+            _this.speedY += GRAVITY / 100;
             _this.sprite.y += _this.speedY;
             _this.sprite.rotation = Math.atan(_this.speedY / GAME_SPEED_X);
             var isCollide = false;
@@ -139,7 +139,7 @@ function draw() {
 }
 button.addEventListener('click', function () {
     gameStarted = true;
-    button.innerHTML = 'Retry';
+    button.innerHTML = 'Thử lại';
     if (gameFailed) {
         gameFailed = false;
         tubeList.forEach(function (d, i) { return d.reset(TUBE_POS_LIST[i]); });
